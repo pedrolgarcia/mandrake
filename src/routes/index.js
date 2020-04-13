@@ -11,8 +11,8 @@ const Stack = createStackNavigator();
 export default function Routes() {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name="Splash" component={Splash} />
+            <Stack.Navigator initialRouteName="Splash">
+                <Stack.Screen name="Splash" component={Splash} options={{ title: 'Splash' }} />
                 <Stack.Screen name="Home" component={Home} />
             </Stack.Navigator>
         </NavigationContainer>

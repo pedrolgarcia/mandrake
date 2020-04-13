@@ -6,4 +6,6 @@ module.exports = {
     endOfLine: 'auto',
     eslintIntegration: true,
     tabWidth: 4,
+    printWidth: 180,
+    proseWrap: 'auto',
 };
