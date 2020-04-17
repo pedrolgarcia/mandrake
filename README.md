@@ -1,11 +1,14 @@
 <h1>Mandrake Template</h1>
 
 <h2>Descrição</h2>
-Boilerplate para projetos em React Native, com estrutura de pastas customizada, estilos CSS-in-JS, ESLint + Prettier + Babel Plugin Root Import, React Navigation, Axios e Redux configurados.
+Boilerplate para projetos em React Native, com estrutura de pastas customizada, estilos com styled-components, ESLint + Prettier + Babel Plugin Root Import, React Navigation, Axios e Redux configurados.
 
 <h2>Init</h2>
 Para iniciar um projeto utilizando o Mandrake Template:
-```react-native init nome_do_projeto --template mandrake```
+
+```
+react-native init nome_do_projeto --template mandrake
+```
 
 <h2>Libraries</h2>
 <ul>
