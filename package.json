@@ -2,52 +2,35 @@
     "name": "mandrake",
     "version": "0.0.1",
     "private": true,
+    "description": "Template para projetos em React Native, com estrutura de pastas customizada, estilos globais, ESLint + Prettier + Babel Plugin Root Import, React Navigation, Axios e Redux configurados.",
+    "keywords": [
+        "react-native",
+        "template",
+        "mandrake",
+        "eslint",
+        "react-navigation",
+        "axios"
+    ],
     "scripts": {
         "android": "react-native run-android",
         "ios": "react-native run-ios",
         "start": "react-native start",
         "test": "jest",
         "lint": "eslint .",
-        "bundle_android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && rm -rf ./android/app/src/main/res/drawable-* && rm -rf ./android/app/src/main/res/raw",
-        "clean_android": "cd android/ && ./gradlew clean && cd ../",
-        "debug_android": "cd android/ && ./gradlew assembleDebug && cd ../",
-        "release_android": "cd android/ && ./gradlew assembleRelease && cd ../"
-    },
-    "dependencies": {
-        "@react-native-community/async-storage": "^1.9.0",
-        "@react-native-community/masked-view": "^0.1.7",
-        "@react-navigation/native": "^5.1.5",
-        "@react-navigation/stack": "^5.2.10",
-        "axios": "^0.19.2",
-        "react": "16.11.0",
-        "react-native": "0.62.2",
-        "react-native-gesture-handler": "^1.6.1",
-        "react-native-reanimated": "^1.8.0",
-        "react-native-safe-area-context": "^0.7.3",
-        "react-native-screens": "^2.4.0",
-        "react-redux": "^7.2.0",
-        "redux": "^4.0.5",
-        "styled-components": "^5.1.0"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.9.0",
-        "@babel/runtime": "^7.9.2",
-        "@react-native-community/eslint-config": "^1.0.0",
-        "babel-jest": "^25.3.0",
-        "babel-plugin-module-resolver": "^4.0.0",
-        "eslint": "^6.8.0",
-        "eslint-config-airbnb": "^18.1.0",
-        "eslint-config-prettier": "^6.10.1",
-        "eslint-plugin-import": "^2.20.2",
-        "eslint-plugin-jsx-a11y": "^6.2.3",
-        "eslint-plugin-prettier": "^3.1.2",
-        "eslint-plugin-react": "^7.19.0",
-        "jest": "^25.3.0",
-        "metro-react-native-babel-preset": "^0.59.0",
-        "prettier": "^2.0.4",
-        "react-test-renderer": "16.11.0"
+        "clean": "cd android/ && ./gradlew clean && cd ../",
+        "bundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && rm -rf ./android/app/src/main/res/drawable-* && rm -rf ./android/app/src/main/res/raw",
+        "apk_debug": "cd android/ && ./gradlew assembleDebug && cd ../",
+        "apk_release": "cd android/ && ./gradlew assembleRelease && cd ../",
+        "bundle_release": "cd android/ && ./gradlew bundleRelease && cd ../"
     },
     "jest": {
         "preset": "react-native"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pedrolgarcia/mandrake.git"
+    },
+    "homepage": "https://github.com/pedrolgarcia/mandrake",
+    "author": "Pedro Lopes <pedrolopes.info@gmail.com.br>",
+    "license": "MIT"
 }

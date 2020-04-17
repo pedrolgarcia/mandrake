@@ -12,7 +12,6 @@ Text.defaultProps = Text.defaultProps || {};
 Text.defaultProps.allowFontScaling = false;
 
 export default function App() {
-
     return (
         <Provider store={store()}>
             <StatusBar barStyle="light-content" backgroundColor={COLORS.primary} />

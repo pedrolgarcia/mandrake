@@ -10,16 +10,14 @@ const defaultOptions = {
     },
 };
 
-let instance = axios.create(defaultOptions);
+const instance = axios.create(defaultOptions);
 
 export const api = (auth = '') => {
-
-    if(auth == 'auth') {
+    if (auth === 'auth') {
         instance.interceptors.request.use(function (config) {
-            const token = store().getState().UserReducer.token;
+            const { token } = store().getState().UserReducer.token;
             config.headers.Authorization = `JWT ${token}`;
-            console.log(token)
-        
+
             return config;
         });
     }
