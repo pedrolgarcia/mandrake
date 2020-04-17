@@ -1,12 +1,7 @@
 import React from 'react';
-import { View } from 'react-native';
 
-import { Container, Text } from '@styles';
+import { Container } from '@styles';
 
-export default function Splash({ navigation }) {
-    return (
-        <Container>
-            <Text type="subtitle" font="black">Olá</Text>
-        </Container>
-    );
+export default function Splash() {
+    return <Container />;
 }

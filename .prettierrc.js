@@ -7,5 +7,5 @@ module.exports = {
     eslintIntegration: true,
     tabWidth: 4,
     printWidth: 180,
-    proseWrap: 'auto',
+    proseWrap: 'never',
 };
