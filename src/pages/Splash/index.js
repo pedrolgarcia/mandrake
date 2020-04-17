@@ -1,7 +1,16 @@
 import React from 'react';
 
-import { Container } from '@styles';
+import { Page, Text } from '@styles';
+import COLORS from '@styles/colors';
 
-export default function Splash() {
-    return <Container />;
+import { Container } from './styles';
+
+export default function Splash() {    
+    return (
+        <Page>
+            <Container>
+                <Text type="title" color={COLORS.secondary} font="black">MANDRAKE</Text>
+            </Container>
+        </Page>
+    );
 }

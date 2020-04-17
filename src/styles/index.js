@@ -2,19 +2,19 @@ import { Platform } from 'react-native';
 
 import styled, { css } from 'styled-components/native';
 
-export const Container = styled.View`
+export const Page = styled.SafeAreaView`
     flex: 1;
-    padding: 20px;
 `;
 
 export const Text = styled.Text`
     font-size: ${(props) => {
         if (props.size) return props.size;
-        else if (props.type === 'title') return '20';
+        else if (props.type === 'title') return '22';
         else if (props.type === 'subtitle') return '16';
         else if (props.type === 'paragraph') return '13';
         else return '13';
     }}px;
+    color: ${(props) => props.color ? props.color : '#000' };
     ${(props) => {
         if (props.font === 'black') {
             return Platform.select({

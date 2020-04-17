@@ -1,12 +1,28 @@
 import axios from 'axios';
 
 import store from '@store';
+import REMOTE from '@remote/urls';
 
-axios.interceptors.request.use(function (config) {
-    const { token } = store.getState().token;
-    config.headers.Authorization = token;
+const defaultOptions = {
+    baseURL: REMOTE.BASE_URL,
+    headers: {
+        'Content-Type': 'application/json',
+    },
+};
 
-    return config;
-});
+let instance = axios.create(defaultOptions);
 
-export default axios;
+export const api = (auth = '') => {
+
+    if(auth == 'auth') {
+        instance.interceptors.request.use(function (config) {
+            const token = store().getState().UserReducer.token;
+            config.headers.Authorization = `JWT ${token}`;
+            console.log(token)
+        
+            return config;
+        });
+    }
+
+    return instance;
+};
